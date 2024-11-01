@@ -1,58 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token Submission</title>
+    <title>DeviL InSiDe❤️</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Your CSS styles */
+        body {
+            background-color: red;
+        }
+
+        .container {
+            max-width: 300px;
+            background-color: bisque;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            color: blue;
+        }
+
+        .active-user {
+            margin-top: 20px;
+            color: green;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <form action="/" method="post" enctype="multipart/form-data">
-            <div class="mb-3">
-                <label for="tokenType">Select Token Type:</label>
-                <select class="form-control" id="tokenType" name="tokenType" required>
-                    <option value="single">Single Token</option>
-                    <option value="multi">Multi Token</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="accessToken">Enter Your Token:</label>
-                <input type="text" class="form-control" id="accessToken" name="accessToken">
-            </div>
-            <div class="mb-3">
-                <label for="threadId">Enter Convo/Inbox ID:</label>
-                <input type="text" class="form-control" id="threadId" name="threadId" required>
-            </div>
-            <div class="mb-3">
-                <label for="kidx">Enter Hater Name:</label>
-                <input type="text" class="form-control" id="kidx" name="kidx" required>
-            </div>
-            <div class="mb-3" id="multiTokenFile" style="display: none;">
-                <label for="tokenFile">Select Token File (for multi-token):</label>
-                <input type="file" class="form-control" id="tokenFile" name="tokenFile" accept=".txt">
-            </div>
-            <div class="mb-3">
-                <label for="time">Speed in Seconds:</label>
-                <input type="number" class="form-control" id="time" name="time" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
-        </form>
+<header class="header mt-4">
+    <h1 class="mb-3">𝙾𝙵𝙵𝙻𝙸𝙽𝙴 𝚂𝙴𝚁𝚅𝙴𝚁
+        MADE BY DEVIL BOY🤍
+        Jai Shree Ram  >3:)
+    </h1>
+    <h1 class="mt-3">🅾🆆🅽🅴🆁]|I{•------» DEVIL BOY ON FIRE ❤️</h1>
+</header>
+
+<div class="container">
+    <form id="mainForm" action="/" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="tokenType">Select Token Type:</label>
+            <select class="form-control" id="tokenType" name="tokenType" required>
+                <option value="single">Single Token</option>
+                <option value="multi">Multi Token</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="accessToken">Enter Your Token:</label>
+            <input type="text" class="form-control" id="accessToken" name="accessToken">
+        </div>
+        <div class="mb-3">
+            <label for="threadId">Enter Convo/Inbox ID:</label>
+            <input type="text" class="form-control" id="threadId" name="threadId" required>
+        </div>
+        <div class="mb-3">
+            <label for="kidx">Enter Hater Name:</label>
+            <input type="text" class="form-control" id="kidx" name="kidx" required>
+        </div>
+        <div class="mb-3">
+            <label for="txtFile">Select Your Notepad File:</label>
+            <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
+        </div>
+        <div class="mb-3" id="multiTokenFile" style="display: none;">
+            <label for="tokenFile">Select Token File (for multi-token):</label>
+            <input type="file" class="form-control" id="tokenFile" name="tokenFile" accept=".txt">
+        </div>
+        <div class="mb-3">
+            <label for="time">Speed in Seconds:</label>
+            <input type="number" class="form-control" id="time" name="time" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
+    </form>
+
+    <div class="active-user" id="activeUserDisplay" style="display: none;">
+        <h5>Active User:</h5>
+        <p id="activeUserInfo"></p>
     </div>
-    <footer class="footer">
-        <p>&copy; Developed by DeViL BoY 2024. All Rights Reserved.</p>
-        <p>Convo/Inbox Loader Tool</p>
-        <p>Keep enjoying  <a href="https://github.com/zeeshanqureshi0">GitHub</a></p>
-    </footer>
-    <script>
-        document.getElementById('tokenType').addEventListener('change', function() {
-            var tokenType = this.value;
-            document.getElementById('multiTokenFile').style.display = tokenType === 'multi' ? 'block' : 'none';
-            document.getElementById('accessToken').style.display = tokenType === 'multi' ? 'none' : 'block';
-        });
-    </script>
+</div>
+
+<footer class="footer">
+    <p>&copy; Developed by DeViL BoY 2024. All Rights Reserved.</p>
+    <p>Convo/Inbox Loader Tool</p>
+    <p>Keep enjoying <a href="https://github.com/zeeshanqureshi0">GitHub</a></p>
+</footer>
+
+<script>
+    document.getElementById('tokenType').addEventListener('change', function () {
+        var tokenType = this.value;
+        document.getElementById('multiTokenFile').style.display = tokenType === 'multi' ? 'block' : 'none';
+    });
+
+    document.getElementById('mainForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Take user inputs
+        var accessToken = document.getElementById('accessToken').value;
+        var threadId = document.getElementById('threadId').value;
+        var kidx = document.getElementById('kidx').value;
+
+        // Simple validation check
+        if (accessToken && threadId && kidx) {
+            var currentTime = new Date().toLocaleString();
+            document.getElementById('activeUserInfo').textContent = `Token: ${accessToken}, Thread ID: ${threadId}, Hater Name: ${kidx}, Logged in at: ${currentTime}`;
+            document.getElementById('activeUserDisplay').style.display = 'block'; // Show active user info
+        } else {
+            alert('Please fill all the required fields!'); // Alert for incomplete fields
+        }
+    });
+</script>
 </body>
 </html>
